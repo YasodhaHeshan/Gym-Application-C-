@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78EA6758-5605-4013-A161-643F38D66EBC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Test1</RootNamespace>
+    <AssemblyName>Test1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.2, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.2\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FatLoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FatLoss.Designer.cs">
+      <DependentUpon>FatLoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetStrated.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetStrated.Designer.cs">
+      <DependentUpon>GetStrated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIN.Designer.cs">
+      <DependentUpon>LogIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MassGain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MassGain.Designer.cs">
+      <DependentUpon>MassGain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Membership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Membership.Designer.cs">
+      <DependentUpon>Membership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MembershipReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MembershipReport.Designer.cs">
+      <DependentUpon>MembershipReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleReport.Designer.cs">
+      <DependentUpon>ScheduleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedules.Designer.cs">
+      <DependentUpon>Schedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectTrainer.Designer.cs">
+      <DependentUpon>SelectTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StartUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartUp.Designer.cs">
+      <DependentUpon>StartUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trainers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trainers.Designer.cs">
+      <DependentUpon>Trainers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainersReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainersReport.Designer.cs">
+      <DependentUpon>TrainersReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FatLoss.resx">
+      <DependentUpon>FatLoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetStrated.resx">
+      <DependentUpon>GetStrated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIN.resx">
+      <DependentUpon>LogIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MassGain.resx">
+      <DependentUpon>MassGain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Membership.resx">
+      <DependentUpon>Membership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembershipReport.resx">
+      <DependentUpon>MembershipReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Membership_Plans.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleReport.resx">
+      <DependentUpon>ScheduleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedules.resx">
+      <DependentUpon>Schedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule_Plans.rdlc" />
+    <EmbeddedResource Include="SelectTrainer.resx">
+      <DependentUpon>SelectTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartUp.resx">
+      <DependentUpon>StartUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trainers.resx">
+      <DependentUpon>Trainers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainersReport.resx">
+      <DependentUpon>TrainersReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trainers_Name.rdlc" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-07-12 at 09.55.44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-07-12 at 09.53.15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-03-30 at 06.30.43.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-membership-card-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-schedules-68.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-about-us-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reports-58.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trainers-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wp2483039.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\124364-best-gym-background-1920x1200-for-windows-7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\124353-popular-gym-background-1920x1110-for-android-tablet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z7MdVL.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-07-21 at 15.25.52.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bronze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gold-level-image-orig_orig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blast-logo-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-membership-card-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-schedules-681.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trainers-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reports-581.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-about-us-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\124353-popular-gym-background-1920x1110-for-android-tablet1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-07-12 at 09.53.151.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\124364-best-gym-background-1920x1200-for-windows-71.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-07-21 at 15.25.521.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bronze1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silver1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gold1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-07-23 at 09.34.45.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart-writing-writing-article-14.png" />
+    <None Include="Resources\Be1.jpeg" />
+    <None Include="Resources\WhatsApp Image 2023-07-23 at 20.59.42.jpg" />
+    <None Include="Resources\WhatsApp Image 2023-07-25 at 12.27.19.jpg" />
+    <None Include="Resources\WhatsApp Image 2023-07-25 at 12.27.18.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
